@@ -6,7 +6,7 @@
 
 body {
 	display: flex;
-	background: #ef62da;
+	background: #f8b195;
 	min-height: 100vh;
 	padding: 0 10px;
 	align-items: center;
@@ -111,7 +111,7 @@ header .calendar-current-date {
 }
 
 .calendar-dates li.active::before {
-	background: #6332c5;
+	background: #c06c84;
 }
 
 .calendar-dates li:not(.active):hover::before {
