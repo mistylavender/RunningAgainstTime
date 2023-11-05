@@ -5,7 +5,7 @@ const ADD_BUTTON = document.getElementById("add");
 let items = getItems();
 
 function getItems() {
-    const value = localStorage.getItem("todo") || "[]";
+   const value = localStorage.getItem("todo") || "[]";
 
     return JSON.parse(value);
 }
@@ -13,7 +13,7 @@ function getItems() {
 function setItems(items) {
     const itemsJson = JSON.stringify(items);
 
-    localStorage.setItem("todo", itemsJson);
+   localStorage.setItem("todo", itemsJson);
 }
 
 function addItem() {
