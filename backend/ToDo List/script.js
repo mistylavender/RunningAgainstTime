@@ -5,7 +5,7 @@ const ADD_BUTTON = document.getElementById("add");
 let items = getItems();
 
 function getItems() {
-   const value = localStorage.getItem("todo") || "[]";
+    const value = localStorage.getItem("todo") || "[]";
 
     return JSON.parse(value);
 }
@@ -13,7 +13,7 @@ function getItems() {
 function setItems(items) {
     const itemsJson = JSON.stringify(items);
 
-   localStorage.setItem("todo", itemsJson);
+    localStorage.setItem("todo", itemsJson);
 }
 
 function addItem() {
@@ -49,9 +49,13 @@ function refreshList() {
     ITEMS_CONTAINER.innerHTML = "";
 
     for (const item of items) {
+        //get itemTemplate from ITEM_TEMPLATE
+        //get the content from that template 
+        //clone the div 
+        //get the div back and interact with the div 
         const itemElement = ITEM_TEMPLATE.content.cloneNode(true);
-        const descriptionInput = itemElement.quereySelector(".item-description");
-        const completedInput = itemElement.quereySelector(".item-completed");
+        const descriptionInput = itemElement.querySelector(".item-description");
+        const completedInput = itemElement.querySelector(".item-completed");
 
         descriptionInput.value = item.description;
         completedInput.checked = item.completed;
@@ -68,6 +72,8 @@ function refreshList() {
     }
 }
 
-ADD_BUTTON.addEventListener("click", () => addItem);
+ADD_BUTTON.addEventListener("click", () => { 
+    addItem(); 
+});
 
 refreshList(); 
