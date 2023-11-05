@@ -8,18 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <link rel="stylesheet" href="../calendar/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="calendar-container">
+    <!-- <div id= "event-creation-prompt "class="event-creation-prompt">
+        <form id="event-creation-form" action="event_creation.html">
+            <label for="title">Event title:</label>
+            <input type="text" id="title" name="title"><br><br>
+
+            <label for="startDate">Start date:</label>
+            <input type="date" id="startDate" name="startDate"><br><br>
+
+            <label for="endDate">End date:</label>
+            <input type="date" id="endDate" name="endDate"><br><br>
+            <input type="submit" value="Create">
+        </form>
+    </div> -->
+
+    <div id="calendar-container" class="calendar-container">
         <header class="calendar-header">
 
             <p class="calendar-current-date"></p>
-            <div class="calendar-navigation">
-                <span id="addEventBtn" type="button"> 
+            <a href="create_event_page.html">
+                <span id="addEventBtn" type="button" action="./add_event/index.html"> 
                     &#43;
                 </span>
+            </a>
+            <div class="calendar-navigation">
+                
                 <span id="calendar-prev" class="material-symbols-rounded">
                     chevron_left
                 </span>

@@ -10,15 +10,28 @@ const currdate = document
 const prenexIcons = document
 	.querySelectorAll(".calendar-navigation span");
 
-const addEvent = document.querySelector('add-event-button');
+// const addEvent = document.querySelector('add-event-button');
 
-const addEventBtn = document.getElementById("addEventBtn");
+// const addEventBtn = document.getElementById("addEventBtn");
 
-addEventBtn.addEventListener('click', function(e) {
-	const eventName = prompt("Create an event: ");
+// // function hide(element) {
+// // 	element.style.display = 'none';
+// // }
 
-	document.body.innerHTML = "<h1>Yay " + eventName + "</h1>";
-});
+// // function show(element) {
+// // 	element.style.display = 'block';
+// // }
+
+// var calendarContainer = document.getElementById("calendar-container");
+// var eventCreationPrompt = document.getElementById("event-creation-form");
+// var eventTitle = document.getElementById('title').value;
+
+// // hide(eventCreationPrompt);
+
+// addEventBtn.addEventListener('click', function (e) {
+// 	hide(calendarContainer);
+// 	show(eventCreationPrompt);
+// });
 
 // Array of month names
 const months = [
@@ -89,10 +102,12 @@ prenexIcons.forEach(icon => {
 
 	// When an icon is clicked
 	icon.addEventListener("click", () => {
-
-		// Check if the icon is "calendar-prev"
-		// or "calendar-next"
-		month = icon.id === "calendar-prev" ? month - 1 : month + 1;
+		if (icon.id == "calendar-prev") {
+			month -= 1;
+		}
+		else if (icon.id == "calendar-next") {
+			month += 1;
+		}
 
 		// Check if the month is out of range
 		if (month < 0 || month > 11) {
