@@ -10,6 +10,16 @@ const currdate = document
 const prenexIcons = document
 	.querySelectorAll(".calendar-navigation span");
 
+const addEvent = document.querySelector('add-event-button');
+
+const addEventBtn = document.getElementById("addEventBtn");
+
+addEventBtn.addEventListener('click', function(e) {
+	const eventName = prompt("Create an event: ");
+
+	document.body.innerHTML = "<h1>Yay " + eventName + "</h1>";
+});
+
 // Array of month names
 const months = [
 	"January",

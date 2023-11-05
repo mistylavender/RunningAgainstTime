@@ -8,15 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <link rel="stylesheet" href= "../calendar/style.css">
+    <link rel="stylesheet" href="../calendar/style.css">
 </head>
 
 <body>
     <div class="calendar-container">
-
         <header class="calendar-header">
+
             <p class="calendar-current-date"></p>
             <div class="calendar-navigation">
+                <span id="addEventBtn" type="button"> 
+                    &#43;
+                </span>
                 <span id="calendar-prev" class="material-symbols-rounded">
                     chevron_left
                 </span>
@@ -40,22 +43,7 @@
         </div>
 
     </div>
-    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
     <script src="script.js"></script>
-
-    <!-- 
-        <script>
-            let app = Vue.createApp({
-                data: function() {
-                    return {
-                        greeting: 'Hello Vue 3!'
-                    }
-                }
-            })
-            app.mount('#calendar-container')
-
-            
-        </script> -->
 </body>
 
 </html>
