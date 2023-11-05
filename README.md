@@ -1,2 +1,2 @@
 # RunningAgainstTime
-A (gamified) calendar.
+A calendar.
