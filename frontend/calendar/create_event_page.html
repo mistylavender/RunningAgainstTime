@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <div id="event-creation-prompt " class="event-creation-prompt">
-        <form id="event-creation-form" action="index.html">
+    <div id="event-creation-prompt " class="event-creation-container">
+        <form id="event-creation-form" action="table_page.html">
             <label for="title">Event title:</label>
             <input type="text" id="title" name="title"><br><br>
 
@@ -21,33 +21,27 @@
 
             <label for="endDate">End date:</label>
             <input type="date" id="endDate" name="endDate"><br><br>
-            <input type="submit" value="Create">
+            <input onclick="myFunction()" type="submit" value="Create">
+
         </form>
     </div>
     <script>
-        const addEvent = document.querySelector('add-event-button');
+        new URLSearchParams(window.location.search).forEach((value, name) => {
+            resultsList.append(`${name}: ${value}`);
+            resultsList.append(document.createElement('br'));
+        }
+        )
 
-        const addEventBtn = document.getElementById("addEventBtn");
+        function myFunction() {
+            let title = document.querySelector("#title").value;
+            let startDate = document.querySelector("#startDate").value;
+            let endDate = document.querySelector("#endDate").value;
 
-        // function hide(element) {
-        // 	element.style.display = 'none';
-        // }
+            localStorage.setItem("startDate", startDate);
+            localStorage.setItem("endDate", endDate);
+            localStorage.setItem("title", title);
+        }
 
-        // function show(element) {
-        // 	element.style.display = 'block';
-        // }
-
-        var calendarContainer = document.getElementById("calendar-container");
-        var eventCreationPrompt = document.getElementById("event-creation-form");
-        var eventTitle = document.getElementById('title').value;
-
-        // hide(eventCreationPrompt);
-
-        addEventBtn.addEventListener('click', function (e) {
-            hide(calendarContainer);
-            show(eventCreationPrompt);
-        });
-    </script>
 
     </script>
 </body>

@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../../frontend/calendar/style.css">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> To-Do List </title>
@@ -11,14 +14,28 @@
 </head>
 
 <body>
-    <div id="items"></div>
-    <template id="itemTemplate">
-        <div class="item">
-            <input type="checkbox" class="item-completed">
-            <input type="text" class="item-description" placeholder="To-Do Item...">
-        </div>
-    </template>
-    <button id="add">Add Item</button>
+    <div class="todo-container">
+        <div id="items"></div>
+        <template id="itemTemplate">
+            <div class="item">
+                <label class="container">
+                    <input type="checkbox" class="item-completed">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="text-container">
+                    <input type="text" class="item-description" placeholder="To-Do Item...">
+                </label>
+            </div>
+
+        </template>
+        <button id="add">Add Item</button>
+        <a href="../../frontend/calendar/index.html">
+            <button id="add">
+                <span>&#x2190;</span>
+            </button>
+        </a>
+
+    </div>
 </body>
 
 </html>

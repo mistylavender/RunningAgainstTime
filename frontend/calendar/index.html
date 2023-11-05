@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Calendar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
@@ -12,31 +13,26 @@
 </head>
 
 <body>
-    <!-- <div id= "event-creation-prompt "class="event-creation-prompt">
-        <form id="event-creation-form" action="event_creation.html">
-            <label for="title">Event title:</label>
-            <input type="text" id="title" name="title"><br><br>
-
-            <label for="startDate">Start date:</label>
-            <input type="date" id="startDate" name="startDate"><br><br>
-
-            <label for="endDate">End date:</label>
-            <input type="date" id="endDate" name="endDate"><br><br>
-            <input type="submit" value="Create">
-        </form>
-    </div> -->
-
     <div id="calendar-container" class="calendar-container">
         <header class="calendar-header">
 
             <p class="calendar-current-date"></p>
-            <a href="create_event_page.html">
-                <span id="addEventBtn" type="button" action="./add_event/index.html"> 
-                    &#43;
-                </span>
-            </a>
+
+            <header class="to-do-list">
+                <a href="../../backend/ToDo List/index.html">
+                    <span id="addEventBtn" type="header">
+                        View To-Do List
+                    </span>
+                </a>
+            </header>
+
             <div class="calendar-navigation">
-                
+                <a href="create_event_page.html">
+                    <span id="addEventBtn" type="button">
+                        &#43;
+                    </span>
+                </a>
+
                 <span id="calendar-prev" class="material-symbols-rounded">
                     chevron_left
                 </span>
@@ -61,6 +57,7 @@
 
     </div>
     <script src="script.js"></script>
+    <script src="to_do_list_script.js"></script>
 </body>
 
 </html>

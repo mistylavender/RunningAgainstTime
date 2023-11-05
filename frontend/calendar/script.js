@@ -10,29 +10,6 @@ const currdate = document
 const prenexIcons = document
 	.querySelectorAll(".calendar-navigation span");
 
-// const addEvent = document.querySelector('add-event-button');
-
-// const addEventBtn = document.getElementById("addEventBtn");
-
-// // function hide(element) {
-// // 	element.style.display = 'none';
-// // }
-
-// // function show(element) {
-// // 	element.style.display = 'block';
-// // }
-
-// var calendarContainer = document.getElementById("calendar-container");
-// var eventCreationPrompt = document.getElementById("event-creation-form");
-// var eventTitle = document.getElementById('title').value;
-
-// // hide(eventCreationPrompt);
-
-// addEventBtn.addEventListener('click', function (e) {
-// 	hide(calendarContainer);
-// 	show(eventCreationPrompt);
-// });
-
 // Array of month names
 const months = [
 	"January",

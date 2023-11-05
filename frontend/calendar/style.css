@@ -15,12 +15,13 @@ body {
 
 .calendar-container {
 	background: #fff;
-	width: 600;
+	width: 500px;
+	height: 500px;
 	border-radius: 10px;
 	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
-.event-creation-prompt {
+.event-creation-container {
 	background: #fff;
 	width: 350px;
 	border-radius: 10px;
@@ -28,15 +29,26 @@ body {
 	padding: 12px 20px;
 }
 
-input{
+input {
 	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
 	box-sizing: border-box;
 }
 
+input[type=submit]{
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	/* box-sizing: border-box; */
+	border:none;
+	background-color:#f8b195;
+}
+
 a {
 	text-decoration: none;
+	color: #c06c84;
+	padding-bottom: 11px;
 }
 
 .calendar-container header {
@@ -44,6 +56,10 @@ a {
 	align-items: center;
 	padding: 25px 30px 10px;
 	justify-content: space-between;
+}
+
+.to-do-list {
+	font-size: 0.8rem;
 }
 
 header .calendar-navigation {
@@ -135,4 +151,67 @@ header .calendar-current-date {
 
 .calendar-dates li:not(.active):hover::before {
 	background: #e4e1e1;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+	color: #4a4a4d;
+	/* font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif; */
+}
+
+th,
+td {
+	padding: 10px 15px;
+	vertical-align: middle;
+}
+
+thead {
+	background: #f67280;
+	color: #fff;
+	/* font-size: 11px; */
+	text-transform: uppercase;
+}
+
+th:first-child {
+	text-align: left;
+	border-top-left-radius: 5px;
+}
+
+th:last-child {
+	border-top-right-radius: 5px;
+}
+
+tbody tr:nth-child(even) {
+	background: #f0f0f2;
+}
+
+td {
+	border-bottom: 1px solid #cecfd5;
+	border-right: 1px solid #cecfd5;
+}
+
+td:first-child {
+	border-left: 1px solid #cecfd5;
+}
+
+.event-title {
+	color: #c06c84;
+	display: block;
+}
+
+.text-offset {
+	color: #7c7c80;
+	font-size: 12px;
+}
+
+.start-date,
+.end-date {
+	text-align: center;
+}
+
+.table-container {
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
