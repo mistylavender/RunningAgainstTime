@@ -2,13 +2,7 @@
     padding: 5px;
     width: 200px;
     margin-bottom: 10px;
-    /* border: none; */
-    /* border-bottom: 4px black; */
 }
-
-/* .item-completed {
-
-} */
 
 .item-completed:checked+.item-description {
     background: #dddddd;
